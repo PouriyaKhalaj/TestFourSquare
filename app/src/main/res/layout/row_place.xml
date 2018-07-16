@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/row_place_iv"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/imageColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="#00000000"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="15dip"
+        app:riv_mutate_background="true"
+        app:riv_oval="false" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:tint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightjunglegreen"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <ir.pooriettaw.testfoursquare.widget.CustomTextView
+        android:id="@+id/row_place_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="ajuhkuchh s"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/row_place_iv"
+        app:layout_constraintStart_toEndOf="@+id/row_place_iv"
+        app:layout_constraintTop_toTopOf="@+id/row_place_iv" />
+
+    <ir.pooriettaw.testfoursquare.widget.CustomTextView
+        android:id="@+id/row_place_far"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/row_place_iv"
+        app:layout_constraintTop_toBottomOf="@+id/row_place_name" />
+
+
+</android.support.constraint.ConstraintLayout>
