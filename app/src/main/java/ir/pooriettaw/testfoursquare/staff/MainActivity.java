@@ -1,12 +1,12 @@
 package ir.pooriettaw.testfoursquare.staff;
 
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.hannesdorfmann.mosby.mvp.MvpActivity;
 
 import java.util.ArrayList;
@@ -15,16 +15,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ir.pooriettaw.testfoursquare.R;
+import ir.pooriettaw.testfoursquare.network.HttpRequestHandler;
 
 public class MainActivity extends MvpActivity<StaffView, StaffPresenter> implements StaffView {
-
     @BindView(R.id.main_rv)
     RecyclerView rvStaff;
+
 
     @OnClick(R.id.main_cv_qr_code)
     void clicked(View v) {
     } // clicked method
-
     StaffRecyclerAdapter adapter;
 
     @Override
@@ -37,6 +37,7 @@ public class MainActivity extends MvpActivity<StaffView, StaffPresenter> impleme
 
     private void init() {
         setupRecycler();
+        HttpRequestHandler.getCurrentLocation(new LatLng(35.718575, 51.397451));
     } // init
 
     private void setupRecycler() {
